@@ -1,7 +1,7 @@
 const daoMemoria = require('./src/DAO/daoMemoriaProductos.js');
 const classProductos = new daoMemoria();
 const yargs = require('yargs/yargs')(process.argv.slice(2));
-const args = yargs.default({ port: 8080 }).argv;
+const args = yargs.default({ PORT: config.PORT }).argv;
 const winston = require('winston');
 
 const logger = winston.createLogger({
@@ -159,7 +159,7 @@ const getRandoms = (req, res) => {
 
 const getInexistent = (req, res) => {
   logger.log('warn', 'Get en Inexistent- log warn');
-  res.render('pages/inexistent', { Port: args.port });
+  res.render('pages/inexistent', { Port: args.PORT });
 };
 
 module.exports = {

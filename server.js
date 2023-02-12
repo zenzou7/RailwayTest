@@ -140,7 +140,7 @@ const httpServer = require('http').createServer(app);
 const io = require('socket.io')(httpServer);
 
 httpServer.listen(args.port, () => {
-  console.log(`Server on http://${config.HOST}:${args.port}`);
+  console.log(`Server on http://${config.HOST}:${args.PORT}`);
 });
 
 app.set('view engine', 'ejs');
