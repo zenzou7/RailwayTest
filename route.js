@@ -1,6 +1,7 @@
 const daoMemoria = require('./src/DAO/daoMemoriaProductos.js');
 const classProductos = new daoMemoria();
 const yargs = require('yargs/yargs')(process.argv.slice(2));
+const config = require('./config');
 const args = yargs.default({ PORT: config.PORT }).argv;
 const winston = require('winston');
 
