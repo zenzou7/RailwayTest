@@ -1,4 +1,6 @@
-require('dotenv').config();
+if (process.env.MODE != 'production') {
+  require('dotenv').config();
+}
 
 module.exports = {
   SECRET: process.env.SECRET,
