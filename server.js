@@ -139,7 +139,7 @@ app.use(
 const httpServer = require('http').createServer(app);
 const io = require('socket.io')(httpServer);
 
-httpServer.listen(args.port, () => {
+httpServer.listen(args.PORT, () => {
   console.log(`Server on http://${config.HOST}:${args.PORT}`);
 });
 
