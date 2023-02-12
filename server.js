@@ -23,7 +23,7 @@ const LocalStrategy = require('passport-local').Strategy;
 const Usuarios = require('./models/users.js');
 
 const yargs = require('yargs/yargs')(process.argv.slice(2));
-const args = yargs.default({ port: 8080 }).argv;
+const args = yargs.default({ PORT: config.PORT }).argv;
 
 const compression = require('compression');
 
